@@ -9,6 +9,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    width: 100vw;
+    height: 100vh;
     font-family: 'Montserrat';
     background: #F5F5FA;
     color: #333333;
@@ -21,7 +23,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
-    font-size: 56px;
+    font-size: 48px;
     line-height: 68px;
   }
 
