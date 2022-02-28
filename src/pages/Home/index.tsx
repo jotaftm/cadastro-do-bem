@@ -14,6 +14,7 @@ import FacebookLogo from "../../assets/facebook.svg";
 import TwitterLogo from "../../assets/Twitter.svg";
 import LinkedinLogo from "../../assets/Linkedin.svg";
 import Ornament from "../../assets/ornament.svg";
+import { FormComponent } from "../../components/form";
 
 export const Home = () => {
   return (
@@ -73,6 +74,7 @@ export const Home = () => {
         </SectionBem>
         <SectionForm>
           <h2>Formulário de cadastro</h2>
+          <FormComponent />
           <BackgroundRed />
         </SectionForm>
       </FullContainer>

@@ -100,10 +100,10 @@ export const SectionForm = styled.div`
 
 export const BackgroundRed = styled.div`
   position: absolute;
-  width: 300px;
-  height: 80%;
+  width: 296px;
+  height: 576px;
+  left: 1044px;
   bottom: 0;
-  right: 5%;
   background: var(--red);
   border-radius: 0px 16px 0px 0px;
 `;
