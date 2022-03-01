@@ -30,6 +30,7 @@ export const Input = ({
         setIsCepError(false);
       } else {
         const cep: string = ev.target.value;
+
         if (cep.length !== 8) {
           setIsCepError(true);
         } else {
@@ -48,6 +49,7 @@ export const Input = ({
                     complement: res.data.complemento,
                   },
                 });
+
                 setIsCepError(false);
               }
             })

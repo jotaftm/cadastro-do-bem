@@ -1,4 +1,5 @@
 import { Container } from "./styles";
+import Loading from "../../assets/loading.svg";
 
 export const Modal = ({ success, setSuccess }: any) => {
   return (
@@ -19,6 +20,10 @@ export const Modal = ({ success, setSuccess }: any) => {
             <h1 onClick={() => setSuccess("")}>X</h1>
             <h2>Parabéns! Você criou sua conta!</h2>
           </div>
+        </Container>
+      ) : success === "loading" ? (
+        <Container>
+          <img src={Loading} alt="Loading" />
         </Container>
       ) : (
         <></>

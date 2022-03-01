@@ -45,6 +45,7 @@ export const FormComponent = () => {
   }, [userData]);
 
   const createUser = (data: any) => {
+    setSuccess("loading");
     apiCadDoBem
       .post("/users", data)
       .then((res) => {
@@ -61,11 +62,13 @@ export const FormComponent = () => {
         abortEarly: false,
       });
 
+      data.birthDate = data.birthDate.replace(/-/g, "/");
+
       createUser(data);
 
       reset();
 
-      (formRef.current! as any).setErrors();
+      return (formRef.current! as any).setErrors({});
     } catch (err) {
       if (err instanceof yup.ValidationError) {
         const errorMessages: ErrorMessages = {};
@@ -97,12 +100,13 @@ export const FormComponent = () => {
           <Input name="cpf" label="CPF *" placeholder="123.456.789-00" />
         </section>
         <section>
+          <Input name="password" label="Senha *" placeholder="Senhaforte9!" />
           <Input
+            className="inputDate"
             name="birthDate"
             label="Data de nascimento *"
-            placeholder="aaaa/mm/dd"
+            type="date"
           />
-          <Input name="password" label="Senha *" placeholder="Senhaforte9!" />
         </section>
         <Scope path="address">
           <section>
